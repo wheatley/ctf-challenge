@@ -1,0 +1,22 @@
+name: The Search Engine Treasure Hunt
+author: hank
+category: osint
+description: |
+  A flag has been hidden somewhere on a public website, and your only clue is that it can be found using a search engine. Your task is to use open-source intelligence (OSINT) techniques and clever search queries to locate the flag. The flag will be in the format `flag{...}`.
+
+  *Hint: Try using advanced search operators (like `site:`, `inurl:`, or `intitle:`) to narrow your results and look for hidden pages or files. All information is publicly available—no hacking required!*
+attribution: hank
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 4
+  function: linear
+  minimum: 100
+
+flags:
+- type: static
+  data: case_insensitive
+  content: flag{search_engine_success}
+
+version: '0.1'
